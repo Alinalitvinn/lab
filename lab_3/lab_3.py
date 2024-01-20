@@ -11,7 +11,7 @@ def read_csv_file():
 
     for index_f in range(1, 28):
         with open(
-                fr'/home/alina/PycharmProjects/pythonProject/special_prog/lab_2/dataset/_2024_01_02__12_57_51_vhi_id_{index_f}.csv',
+                fr'data/vhi_data_province_{index_f}_2024-01-18_19-28-34.csv',
                 "r") as dataset:
             df = dataset.readlines()
             df = [line.strip().split(',') for line in df]
