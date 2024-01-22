@@ -46,9 +46,10 @@ def read_csv_file():
 def min_max_VHI(year, index):
     a = read_csv_file()
     VHI = a[(a["year"] == year) & (a["index_region"] == index) & (a['VHI'] != -1.00)]
-
-    return VHI['VHI'].max(), VHI['VHI'].min()
-print("min_max_VHI: ",min_max_VHI(1982, 2))
+    output = "min_max_VHI for year " + str(year) + ": " + str(VHI['VHI'].min()) + " " + str(VHI['VHI'].max())
+    #return VHI['VHI'].max(), VHI['VHI'].min()
+    return output
+print(min_max_VHI(1982, 2))
 
 #Ряд VHI за всі роки для області, виявити роки з екстремальними посухами, які торкнулися більше вказаного відсотка області;
 def ext_drought(index):
